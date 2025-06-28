@@ -16,7 +16,7 @@ type Metric = {
    icon: React.ReactNode
    iconBg: string
     iconArrow?: React.ReactNode
-   font: string
+  
 
 }
 
@@ -27,8 +27,8 @@ const metrics: Metric[] = [
     change: '4%',
     icon: <RiFileList3Fill className='text-green-600 p-2 text-5xl rounded-full'/>,
     iconArrow: <FaArrowUp className='p-2 bg-green-200 rounded-full text-green-500 text-3xl'/>,
-    iconBg:  'bg-green-100',
-     font: "poppins"
+    iconBg:  'bg-green-100'
+     
    
   },
   {
@@ -37,8 +37,8 @@ const metrics: Metric[] = [
     change: '4%',
     icon: <BsFillBoxSeamFill className='text-green-600 p-2 text-5xl rounded-full'/>,
     iconArrow:<FaArrowUp className='p-2 bg-green-200 rounded-full text-green-500 text-3xl'/>,
-    iconBg:  'bg-green-100',
-     font: "poppins"
+    iconBg:  'bg-green-100'
+    
   },
   {
     value: 65,
@@ -46,8 +46,8 @@ const metrics: Metric[] = [
     change: '25%',
     icon: <MdFreeCancellation className='text-green-600 p-2 text-5xl rounded-full'/>,
     iconArrow: <FaArrowDown className='p-2 bg-red-200 rounded-full text-red-500 text-3xl'/>,
-    iconBg:  'bg-green-100',
-     font: "poppins"
+    iconBg:  'bg-green-100'
+    
     
   },
   {
@@ -56,8 +56,8 @@ const metrics: Metric[] = [
     change: '12%',
     icon: <IoBagCheckSharp className='text-green-600 p-2 text-5xl rounded-full'/>,
      iconArrow: <FaArrowDown className='p-2 bg-red-200 rounded-full text-red-500 text-3xl'/>,
-    iconBg:  'bg-green-100',
-    font: "poppins"
+    iconBg:  'bg-green-100'
+    
   },
 ]
 

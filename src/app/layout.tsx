@@ -7,7 +7,6 @@ import PieChartCard from "./components/PieChartCard";
 import RevenueChart from "./components/RevenueChart";
 import SearchBar from "./components/SearchBar";
 import SideBar from "./components/SideBar";
-import font, { Poppins } from "next/font/google";
 import "./globals.css";
 
 
