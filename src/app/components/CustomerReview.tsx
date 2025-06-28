@@ -22,7 +22,7 @@ const reviews: Review[] = [
     avatar: '/avatar1.jpg',
     name: 'Jons Sena',
     date: '2 days ago',
-    comment: 'Amazing service and the food was super fresh! I would love to have more next time and taste other meals because I’m sure they’ll be great.',
+    comment: 'Amazing service and the food was super fresh! I would love to have more next time and taste other meals.',
     rating: 5,
     ratingValue: '5.0',
     foodImage: '/meal-4.png'
@@ -32,7 +32,7 @@ const reviews: Review[] = [
     avatar: '/avatar2.jpg',
     name: 'Sofia',
     date: '2 days ago',
-    comment: 'Fast delivery and hot meals. I will surely order again because the food tasted heavenly and I can’t wait to have more.',
+    comment: 'Fast delivery and hot meals. I will surely order again because the food tasted heavenly.',
     rating: 4,
     ratingValue: '4.5',
     foodImage: '/meal-5.png'
@@ -110,14 +110,14 @@ export default function CustomerReview() {
             className="flex bg-white shadow-xl rounded-xl overflow-hidden w-[320px] md:w-[360px] flex-shrink-0"
           >
             {/* Left section */}
-            <div className="px-5 py-3 flex-1 flex flex-col justify-between space-y-4">
+            <div className="px-5 py-2 flex-1 flex flex-col justify-between space-y-4">
               <div className="flex items-center gap-4">
                 <Image
                   src={review.avatar}
                   alt="avatar"
                   width={48}
                   height={48}
-                  className="rounded-full w-24 h-24 object-cover "
+                  className="rounded-full w-16 h-16 object-cover "
                 />
                 <div>
                   <h2 className="text-lg font-semibold">{review.name}</h2>
@@ -147,7 +147,7 @@ export default function CustomerReview() {
                 alt="Food"
                 width={160}
                 height={160}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover text-center"
               />
             </div>
           </div>
