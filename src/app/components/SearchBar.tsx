@@ -19,7 +19,7 @@ export default function SearchBar() {
             </div>
 
             <div className='flex items-center gap-4'>
-        <span className='flex items-center md:space-x-4 space-x-3 mt-6'>
+        <span className='flex items-center md:space-x-4 space-x-3 mt-6 md:mt-0'>
         <RiNotification2Line className='md:text-5xl text-3xl p-1 text-[#2D9CDB] md:p-3  bg-blue-200 rounded-2xl'/>
         <IoChatboxEllipsesOutline className='md:text-5xl text-3xl text-[#2D9CDB] p-1 md:p-3 bg-blue-200 rounded-2xl'/>
         <GoGift className='md:text-5xl md:p-3 p-1 text-3xl text-[#5E6C93] bg-gray-300 rounded-2xl'/>
