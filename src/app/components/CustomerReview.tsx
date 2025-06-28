@@ -25,7 +25,7 @@ const reviews: Review[] = [
     comment: 'Amazing service and the food was super fresh! I would love to have more next time and taste other meals because I’m sure they’ll be great.',
     rating: 5,
     ratingValue: '5.0',
-    foodImage: '/meal1.jpg'
+    foodImage: '/meal-4.png'
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const reviews: Review[] = [
     comment: 'Fast delivery and hot meals. I will surely order again because the food tasted heavenly and I can’t wait to have more.',
     rating: 4,
     ratingValue: '4.5',
-    foodImage: '/meal2.jpeg'
+    foodImage: '/meal-5.png'
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const reviews: Review[] = [
     comment: 'Great flavors and portion size was generous. Loved every bite of it.',
     rating: 4,
     ratingValue: '4.0',
-    foodImage: '/meal3.jpg'
+    foodImage: '/meal-3.png'
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const reviews: Review[] = [
     comment: 'Loved the dessert and the hospitality. Highly recommend this place.',
     rating: 5,
     ratingValue: '5.0',
-    foodImage: '/meal4.avif'
+    foodImage: '/meal-1.png'
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const reviews: Review[] = [
     comment: 'Quick service and well-packed food.',
     rating: 4,
     ratingValue: '4.2',
-    foodImage: '/meal5.webp'
+    foodImage: '/meal-2.png'
   }
 ]
 
@@ -110,7 +110,7 @@ export default function CustomerReview() {
             className="flex bg-white shadow-xl rounded-xl overflow-hidden w-[320px] md:w-[360px] flex-shrink-0"
           >
             {/* Left section */}
-            <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
+            <div className="px-5 py-3 flex-1 flex flex-col justify-between space-y-4">
               <div className="flex items-center gap-4">
                 <Image
                   src={review.avatar}
@@ -125,7 +125,7 @@ export default function CustomerReview() {
                 </div>
               </div>
 
-              <p className="text-gray-700 text-[15px] leading-relaxed">{review.comment}</p>
+              <p className="text-gray-700 text-sm leading-relaxed">{review.comment}</p>
 
               <div className="flex items-center space-x-1">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -136,7 +136,7 @@ export default function CustomerReview() {
                     }`}
                   />
                 ))}
-                <span className="text-[15px] text-gray-600 ml-2">{review.ratingValue}</span>
+                <span className="text-sm text-gray-600 ml-2">{review.ratingValue}</span>
               </div>
             </div>
 
