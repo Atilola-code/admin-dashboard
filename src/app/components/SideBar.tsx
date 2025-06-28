@@ -75,7 +75,7 @@ export default function SideBar() {
                   <div className="w-1 h-10 bg-transparent group-hover:bg-green-700 transition-all"></div>
                   <a
                     href="#"
-                    className="flex items-center p-2 hover:bg-green-200 rounded-md flex-1 ml-2"
+                    className="flex items-center p-2 hover:bg-green-200 rounded-md flex-1 ml-8"
                   >
                     <span className="text-2xl">{item.icon}</span>
                     <span className="p-2 ml-4">{item.label}</span>
