@@ -22,7 +22,7 @@ const data = [
 
 export default function OrderChart() {
   return (
-    <div className="bg-white shadow-xl rounded-xl p-6 w-full md:w-[50%] mt-6 h-[300px] flex flex-col">
+    <div className="bg-white shadow-xl rounded-xl p-6 flex flex-col h-[300px] w-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>

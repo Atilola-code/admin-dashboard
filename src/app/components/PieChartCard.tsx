@@ -44,7 +44,7 @@ export default function PieChartCard() {
   const [showValue, setShowValue] = useState(true)
 
   return (
-    <div className="bg-white shadow-xl rounded-xl p-6 mx-2 mt-6 w-[50%] h-[300px] flex flex-col">
+    <div className="bg-white shadow-xl rounded-xl p-6 flex flex-col w-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-6 flex-wrap gap-2">
         <h2 className="text-lg font-semibold text-black">Pie Chart</h2>
@@ -67,7 +67,7 @@ export default function PieChartCard() {
       </div>
 
       {/* Pie Charts Row */}
-      <div className="flex items-center justify-between flex-wrap gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {pieMetrics.map((metric, idx) => {
           const lightColor = lightenColor(metric.color, 55)
           const chartData = [
@@ -78,7 +78,7 @@ export default function PieChartCard() {
           return (
             <div
               key={idx}
-              className="flex flex-col items-center w-[30%] min-w-[120px] flex-grow"
+              className="flex flex-col items-center"
             >
               <ResponsiveContainer width="100%" height={150}>
                 <PieChart>

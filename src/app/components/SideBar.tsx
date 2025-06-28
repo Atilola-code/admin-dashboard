@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import { GoHome } from "react-icons/go";
 import { VscListFlat } from "react-icons/vsc";
 import { LuStickyNote } from "react-icons/lu";
@@ -12,11 +13,26 @@ import { FiCalendar } from "react-icons/fi";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { TfiWallet } from "react-icons/tfi";
 import { FaHeart } from "react-icons/fa";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoMdClose } from "react-icons/io";
 
 export default function SideBar() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
   return (
-    <div>
-      <aside className='w-84 bg-white shadow-lg flex flex-col justify-between'>
+    <div>  
+        <button
+        className="fixed top-10 left-4 z-50 md:hidden p-2 bg-white rounded-lg shadow"
+        onClick={toggleSidebar}>
+        {isOpen ? <IoMdClose  className="text-2xl text-[#00B074]" /> : <GiHamburgerMenu className="text-2xl text-[#00B074]" />}
+      </button>
+      <aside className={`fixed top-0 left-0 z-40 h-full w-74 bg-white shadow-lg flex flex-col justify-between transform transition-transform duration-300 ease-in-out ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        } md:translate-x-0 md:static md:block`}>
         <div className="font-mono min-h-screen px-8">
           <div className="p-4">
             <h1 className="text-4xl font-sans font-bold mb-2">Sedap<span className='text-green-500  rounded-full'>.</span></h1>

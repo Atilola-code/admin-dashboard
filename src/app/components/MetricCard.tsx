@@ -25,7 +25,7 @@ const metrics: Metric[] = [
     value: 75,
     label: 'Total Orders',
     change: '4%',
-    icon: <RiFileList3Fill className='text-green-600 p-2 text-5xl rounded-full'/>,
+    icon: <RiFileList3Fill className='text-green-600 md:p-2 p-1 md:text-5xl text-3xl rounded-full'/>,
     iconArrow: <FaArrowUp className='p-2 bg-green-200 rounded-full text-green-500 text-3xl'/>,
     iconBg:  'bg-green-100'
      
@@ -35,7 +35,7 @@ const metrics: Metric[] = [
     value: 357,
     label: 'Total Delivered',
     change: '4%',
-    icon: <BsFillBoxSeamFill className='text-green-600 p-2 text-5xl rounded-full'/>,
+    icon: <BsFillBoxSeamFill className='text-green-600 md:p-2 p-1 md:text-5xl text-3xl rounded-full'/>,
     iconArrow:<FaArrowUp className='p-2 bg-green-200 rounded-full text-green-500 text-3xl'/>,
     iconBg:  'bg-green-100'
     
@@ -44,7 +44,7 @@ const metrics: Metric[] = [
     value: 65,
     label: 'Total Canceled',
     change: '25%',
-    icon: <MdFreeCancellation className='text-green-600 p-2 text-5xl rounded-full'/>,
+    icon: <MdFreeCancellation className='text-green-600 md:p-2 p-1 md:text-5xl text-3xl rounded-full'/>,
     iconArrow: <FaArrowDown className='p-2 bg-red-200 rounded-full text-red-500 text-3xl'/>,
     iconBg:  'bg-green-100'
     
@@ -54,7 +54,7 @@ const metrics: Metric[] = [
     value: '$128',
     label: 'Total Revenue',
     change: '12%',
-    icon: <IoBagCheckSharp className='text-green-600 p-2 text-5xl rounded-full'/>,
+    icon: <IoBagCheckSharp className='text-green-600 md:p-2 md:text-5xl text-3xl p-1 rounded-full'/>,
      iconArrow: <FaArrowDown className='p-2 bg-red-200 rounded-full text-red-500 text-3xl'/>,
     iconBg:  'bg-green-100'
     
@@ -63,10 +63,10 @@ const metrics: Metric[] = [
 
 export default function MetricCard() {
   return (
-    <div className='mx-8 mt-6'>
+    <div className='md:mx-8 mx-2 mt-6'>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-4 '>
         {metrics.map((metric, index) => (
-      <div key={index} className='flex flex-row items-center justify-between rounded-xl text-center shadow-2xl p-4 bg-white'>
+      <div key={index} className='flex flex-row items-center justify-between rounded-xl text-center shadow-2xl md:p-4 p-2 bg-white'>
         <div className={`p-2 rounded-full mb-4 ml-2 ${metric.iconBg}`}>
             {metric.icon}
         </div>

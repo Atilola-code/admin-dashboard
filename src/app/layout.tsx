@@ -9,8 +9,6 @@ import SearchBar from "./components/SearchBar";
 import SideBar from "./components/SideBar";
 import "./globals.css";
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,43 +18,38 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex min-h-screen bg-[#F3F2F7]">
-          {/* Sidebar */}
-            <SideBar/>
+          <SideBar />
 
+          <div className="flex-1 flex flex-col overflow-x-hidden min-h-screen">
+            <SearchBar />
+            <Dashboard />
+            <MetricCard />
 
-          {/* Main Content */}
-          <div className="flex-1 flex flex-col overflow-x-hidden">
-            <SearchBar/>
-            <Dashboard/>
-            <MetricCard/>
-
-            {/* Chart section */}
-            <div className="flex  lg:flex-nowrap gap-6 mx-8 mt-6">
-            <PieChartCard/>
-            <OrderChart/>
-            </div>
-
-            <div className="flex gap-6 mx-8 mt-6">
-  {/* Total Revenue chart - 60% width */}
-  <div className="w-full md:w-[60%]">
-    <RevenueChart />
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mx-4 md:mx-4 mt-6">
+  <div className="col-span-3 flex flex-col md:flex-row gap-6">
+    <PieChartCard />
+    <OrderChart />
   </div>
 
-  {/* Customer Map chart - 40% width */}
-  <div className="w-full md:w-[40%]">
-    <CustomerMapChart />
+  <div className="col-span-3 flex flex-col md:flex-row gap-6">
+    <div className="w-full md:w-2/3">
+      <RevenueChart />
+    </div>
+    <div className="w-full md:w-1/3">
+      <CustomerMapChart />
+    </div>
   </div>
 </div>
 
-    {/* Customers review */}
-      <CustomerReview/>
 
+            <CustomerReview />
 
-        {children}
+            {children}
           </div>
         </div>
       </body>
     </html>
   );
 }
+
 
